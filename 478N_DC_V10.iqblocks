@@ -1,0 +1,33 @@
+float myVariable;
+
+// "when started" hat block
+int whenStarted1() {
+  Drivetrain.setDriveVelocity(50.0, percent);
+  Drivetrain.setTurnVelocity(50.0, percent);
+  armmotor.setStopping(hold);
+  Intake.setStopping(hold);
+  armmotor.setVelocity(50.0, percent);
+  armmotor.setMaxTorque(50.0, percent);
+  Intake.setVelocity(50.0, percent);
+  Intake.setMaxTorque(50.0, percent);
+  return 0;
+}
+
+// "when Controller ButtonEUp pressed" hat block
+void onevent_ControllerButtonEUp_pressed_0() {
+  armmotor.spinFor(forward, 320.0, degrees, true);
+  Intake.spinFor(reverse, 3.0, turns, true);
+  armmotor.spinFor(reverse, 250.0, degrees, true);
+}
+
+
+int main() {
+  // Initializing Robot Configuration. DO NOT REMOVE!
+  vexcodeInit();
+
+  // register event handlers
+  Controller.ButtonEUp.pressed(onevent_ControllerButtonEUp_pressed_0);
+
+  wait(15, msec);
+  whenStarted1();
+}
