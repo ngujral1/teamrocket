@@ -2,14 +2,14 @@ float myVariable;
 
 // "when started" hat block
 int whenStarted1() {
-  Drivetrain.setDriveVelocity(50.0, percent);
-  Drivetrain.setTurnVelocity(50.0, percent);
+  Drivetrain.setDriveVelocity(100.0, percent);
+  Drivetrain.setTurnVelocity(100.0, percent);
   armmotor.setStopping(hold);
   Intake.setStopping(hold);
-  armmotor.setVelocity(50.0, percent);
-  armmotor.setMaxTorque(50.0, percent);
-  Intake.setVelocity(50.0, percent);
-  Intake.setMaxTorque(50.0, percent);
+  armmotor.setVelocity(100.0, percent);
+  armmotor.setMaxTorque(100.0, percent);
+  Intake.setVelocity(100.0, percent);
+  Intake.setMaxTorque(100.0, percent);
   return 0;
 }
 
