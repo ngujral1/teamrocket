@@ -6,18 +6,18 @@ int whenStarted1() {
   Drivetrain.setTurnVelocity(100.0, percent);
   armmotor.setStopping(hold);
   Intake.setStopping(hold);
-  armmotor.setVelocity(100.0, percent);
-  armmotor.setMaxTorque(100.0, percent);
-  Intake.setVelocity(100.0, percent);
-  Intake.setMaxTorque(100.0, percent);
+  armmotor.setVelocity(40.0, percent);
+  armmotor.setMaxTorque(40.0, percent);
+  Intake.setVelocity(75.0, percent);
+  Intake.setMaxTorque(75.0, percent);
   return 0;
 }
 
 // "when Controller ButtonEUp pressed" hat block
 void onevent_ControllerButtonEUp_pressed_0() {
-  armmotor.spinFor(forward, 320.0, degrees, true);
-  Intake.spinFor(reverse, 3.0, turns, true);
-  armmotor.spinFor(reverse, 250.0, degrees, true);
+  armmotor.spinFor(forward, 1.0, turns, true);
+  Intake.spinFor(reverse, 1.0, turns, true);
+  armmotor.spinFor(reverse, 1.0, turns, true);
 }
 
 
